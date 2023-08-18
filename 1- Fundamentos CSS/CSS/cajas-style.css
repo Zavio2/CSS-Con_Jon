@@ -1,0 +1,136 @@
+/* 
+Hay informacion más detallada en la documentacion online (developer.mozilla.org)
+
+
+Box-model o modelo de cajas: hace referencia a la forma en la que css ve los elementos html,
+ en forma de cajas
+ Estan formadas por:
+
+ -Content (contenido)
+ -Border (borde)
+ -Padding (relleno)
+ -Margin (margen)
+
+
+
+
+Propiedades que controlan el flujo del contenido en una caja.
+box-decoration-break 
+box-sizing
+overflow
+overflow-x 
+overflow-y
+
+Propiedades que controlan el tamaño de una caja.
+height
+width
+max-height
+max-width 
+min-height
+min-width
+
+Propiedades que controlan los márgenes de una caja.
+margin
+margin-bottom
+margin-left 
+margin-right
+margin-top 
+
+Propiedades que controlan los rellenos de una caja
+padding
+padding-bottom
+padding-left (en-US)
+padding-right (en-US)
+padding-top
+
+Otras propiedades
+box-shadow
+visibility
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  width: 400px;
+  height: 400px;
+
+  /*son propiedades de tipo shorthand,
+      puedo dar todos los valores en una sola linea
+       o ser mas especifico si lo necesito */
+
+  border: 20px solid blue;
+
+  padding: 100px 5px 10px 100px;
+} /*es: top, rigth, bottom, left (sentido del reloj) */
+
+.caja-2 {
+  width: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-top-color: blue;
+  border-bottom-color: red;
+  border-radius: 20px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  padding-left: 100px;
+  line-height: 1.6;
+}
+
+.caja-3 {
+  margin: 20px;
+  padding: 20px;
+  border: 10px solid greenyellow;
+}
+
+/* Overflow */
+
+.overflow {
+  width: 200px;
+  height: 100px;
+  color: white;
+  background-color: black;
+  overflow: auto;
+}
+
+/* Tamaño de caja */
+
+.con-content-box {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+  border: solid 10px;
+  padding: 30px;
+  box-sizing: content-box;
+  margin-bottom: 20px;
+}
+
+.con-border-box {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+  border: solid 10px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* centrado de cajas */
+
+.sitio-web {
+  border: solid thin black;
+  background-color: rgba(130, 126, 180, 0.616);
+  width: 500px;
+  height: 800px;
+  padding: 16px;
+
+  margin-left: auto;
+  margin-right: auto; /*esto centra la caja */
+}

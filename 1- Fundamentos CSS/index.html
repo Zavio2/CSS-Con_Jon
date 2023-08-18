@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso CSS con Jon Mircha</title>
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <article id="inicio">
+      <h1>Aprendiendo CSS</h1>
+      <p> <i>Cascading Style sheets</i> = hoja de estilo en cascada</p>
+
+      <h2>Temario del curso</h2>
+      <ul>
+        <li><a href="index.html#selectores-basicos">Selectores básicos</a></li>
+        <li>
+          <a href="index.html#selectores-avanzados">Selectores avanzados</a>
+        </li>
+        <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+        <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+        <li><a href="index.html#agrupar-selectores">Agrupar selectores</a></li>
+        <li><a href="index.html#algoritmo-css">El algoritmo de CSS</a></li>
+        <li><a href="index.html#normalize">Reseteo y normalización</a></li>
+        <li>
+          <a href="index.html#prefijos-nav">Prefijos de los navegadores</a>
+        </li>
+        <li><a href="Modelo de cajas.html">Modelo de cajas</a></li>
+        <li><a href="Position.html">Position</a></li>
+        <li><a href="Unidades-de-medida.html">Unidades de medida</a></li>
+        <li><a href="Variables y funciones.html">Variables y funciones</a></li>
+      </ul>
+    </article>
+    <hr />
+    <article id="selectores-basicos">
+      <h2>Selectores básicos</h2>
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos fugit
+        soluta in ex saepe reiciendis doloribus aliquid similique autem, nostrum
+        unde. Asperiores non corporis dolorum id mollitia quam perferendis
+        assumenda.
+      </p>
+
+      <p id="parrafo-dos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+        voluptatum maxime voluptate enim dolor adipisci. Facere, eius aperiam
+        ratione aliquam obcaecati, impedit dolorem sunt dolor molestiae
+        exercitatio nem atque dignissimos. Magnam?
+      </p>
+
+      <p class="text-32 bg-skyblue">
+        <i>EJEMPLOS RANDOM USANDO VARIAS CLASES EN EL MISMO ELEMENTO</i>
+        Repellat dicta, nemo deleniti, qui placeat debitis voluptas possimu s
+        accusamus voluptatibus in sit odit consequuntur pariatur perspicia tis
+        voluptatum eveniet? Porro, itaque hic.
+      </p>
+
+      <p class="text-20 bg-steelblue text-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+        dicta, nemo deleniti, qui placeat debitis voluptas possimu s accusamus
+        voluptatibus in sit odit consequuntur pariatur perspicia
+      </p>
+
+      <p class="text-32 bg-skyblue text-white">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+        dicta, nemo deleniti, qui placeat debitis voluptas possimu s accusamus
+        voluptatibus in sit odit consequuntur pariatur perspicia
+      </p>
+      <a class="volver-inicio" href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="selectores-avanzados">
+      <h2>Selectores avanzados</h2>
+      <h3>Selectores hijos</h3>
+      <h4>Selector de hijos directos</h4>
+      <ul class="hijos-directos">
+        <li><b>Ejemplo 1</b></li>
+        <li><b>Ejemplo 2</b></li>
+        <li><b>Ejemplo 3</b></li>
+        <li><b>Ejemplo 4</b></li>
+      </ul>
+      <h4>Selector de hijos descendientes</h4>
+      <ul class="hijos-descendientes">
+        <li><b>Ejemplo 1</b></li>
+        <li><b>Ejemplo 2</b></li>
+        <li><b>Ejemplo 3</b></li>
+        <li><b>Ejemplo 4</b></li>
+      </ul>
+
+      <h3>Selectores hermanos</h3>
+      <h4>Selectores hermanos (en general)</h4>
+      <ul>
+        <li class="hermanos-general"><b>Ejemplo 1</b></li>
+        <li><b>Ejemplo 2</b></li>
+        <li><b>Ejemplo 3</b></li>
+        <li><b>Ejemplo 4</b></li>
+      </ul>
+      <h4>Selectores hermanos adyacentes</h4>
+      <ul>
+        <li class="hermanos-adyacentes"><b>Ejemplo 1</b></li>
+        <li><b>Ejemplo 2</b></li>
+        <li><b>Ejemplo 3</b></li>
+        <li><b>Ejemplo 4</b></li>
+      </ul>
+
+      <h3>Selectores de atributos</h3>
+      <nav class="selectores-atributos">
+        <ul>
+          <li>
+            <a href="https://jonmircha.com" target="_blank">Jon Mircha</a>
+          </li>
+          <li>
+            <a href="https://jonmircha.com/cursos" target="_blank">cursos</a>
+          </li>
+          <li><a href="https://jonmircha.com/blog" target="_blank">blog</a></li>
+
+          <li><a href="https://jonmircha.com/CV" target="_blank">CV</a></li>
+          <li>
+            <a href="https://jonmircha.com/ahora" target="_blank">ahora</a>
+          </li>
+          <li>
+            <a href="index.html#inicio">Volver al temario</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h3>Selector universal (*)</h3>
+
+      <ul class="selector-universal-especifico">
+        <li>
+          <p>Ejemplo 1</p>
+        </li>
+        <li>
+          <p>Ejemplo 2</p>
+        </li>
+        <li>
+          <p>Ejemplo 3</p>
+        </li>
+      </ul>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="pseudoclases">
+      <h2>Pseudoclases</h2>
+
+      <form class="form-pseudo">
+        <input type="text" name="nombre" placeholder="tu nombre" required />
+        <br />
+        <input type="email" name="correo" placeholder="tu correo" required />
+        <br />
+        <input type="submit" /> <br />
+      </form>
+      <br />
+      <img
+        class="img-random"
+        height="auto"
+        width="500px"
+        src="assets/randomimg.jpg"
+      />
+      <br />
+
+      <p>
+        Hay otras pseudoclases, buscar luego los tipos de pseudoclases y sus
+        usos
+      </p>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="pseudoelementos">
+      <h2>Pseudoelementos</h2>
+
+      <p class="pseudoelementos">
+        Ejemplo de "selection" y "first-letter". Puedo decidir el color que tome
+        este texto al seleccionarlo y el aspecto de la 1ra letra.
+      </p>
+      <br /><br />
+
+      <p class="firstline">
+        Ejemplo de first line para cambiar el aspecto del texto que caiga en la
+        1ra linea de cualquier parrafo. Quae nesciunt iure similique aspernatur
+        ipsum porro quia quas, atque sint qui minima sunt voluptatum velit
+        impedit architecto aut voluptate suscipit quibusdam? Doloribus suscipit
+        placeat modi facere provident minus voluptatem reiciendis odio?
+        Praesentium quam quo doloribus beatae saepe sint, fugiat enim animi
+        vitae consectetur hic. Illum laborum optio, quam blanditiis aliquid
+        magnam! Delectus minima cupiditate iure sint sapiente sed quos illum
+        dolorem repudiandae tempore ducimus dignissimos iusto velit, quae quidem
+        provident eligendi dolore officia ratione minus aliquid saepe est vero
+        voluptatem! Laudantium! Quibusdam, voluptates animi corrupti obcaecati
+        sit vel, quaerat odit consectetur porro ad eum itaque aperiam aliquid
+        minima voluptatibus. Voluptate possimus, quae deserunt nostrum tenetur
+        sequi voluptatem. Eaque labore at dicta? Temporibus quisquam in
+        voluptates voluptatibus fugit officia praesentium quis asperiores, quae
+        similique veniam illo dignissimos animi magni aspernatur totam
+        consequuntur voluptatem reiciendis excepturi repellendus deleniti!
+        Veritatis commodi omnis nesciunt animi!
+      </p>
+
+      <h4>After y before</h4>
+
+      <ul>
+        <li class="after">Ejemplo after</li>
+        <li class="before">Ejemplo before</li>
+      </ul>
+
+      <i
+        >Hay más pseudoelementos, buscar en la documentacion CSS si necesito
+        usarlos</i
+      >
+      <br /><br />
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="agrupar-selectores">
+      <h2>Agrupar selectores</h2>
+
+      <form class="form-agrupar-selectores">
+        <input type="text" name="nombre" placeholder="Escribe tu nombre" />
+        <br />
+        <input type="email" name="email" placeholder="Escribe tu email" />
+        <br />
+        <textarea
+          name="comentarios"
+          cols="10"
+          rows="5"
+          placeholder="Escribe tus comentarios"
+        ></textarea>
+        <br />
+        <input type="submit" />
+      </form>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="algoritmo-css">
+      <h2>El algoritmo de CSS</h2>
+
+      <ul>
+        <li>La cascada</li>
+        <pre>
+        Se van poniendo los estilos de arriba a abajo, en el orden que aparezcan.
+      </pre
+        >
+
+        <li>La especificidad</li>
+
+        <pre>
+        1. !important 
+        [rompe la especificidad]
+
+        2. Estilos en linea (estilos en el mismo html)
+         [1,0,0,0]
+        
+        3. ID (#mi-id) 
+        [0,1,0,0]
+        
+        4.                                             
+        -Clases (.class) 
+        -Pseudo clases 
+        -Selector de atributos
+        [0,0,1,0]
+        
+       5.                                             
+        -Etiquetas  (H1, h2, p, b...) 
+        -Pseudoelementos (before, after, first...) 
+        [0,0,0,1]
+      </pre
+        >
+
+        <p class="p" id="p">PPPPPPPPPPPPPPPPPP</p>
+
+        <li>La herencia</li>
+        <pre>
+          Hay valores que se heredan (como los relacionados con la fuente) y otros que no (como el color de fondo y el borde). 
+          Tambien depende del tipo etiqueta hijo, algunas heredan y otras no.
+
+          (Luego buscar más info en la documentación online)
+        </pre>
+      </ul>
+
+      <br />
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+
+    <article id="normalize">
+      <h2>Reseteo y normalización</h2>
+
+      <p>Usar el archivo normalize.css en todos los proyectos</p>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+
+    <article id="prefijos-nav">
+      <h2>Prefijos de los navegadores</h2>
+
+      <p>
+        Es para que algunos navegadores reconozcan elementos que no estén
+        implementados en ellos. Buscar en la documentacion online si es
+        necesario
+      </p>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+
+    <article id="">
+      <h2></h2>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+
+    <article id="">
+      <h2></h2>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+
+    <article id="">
+      <h2></h2>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+    <article id="">
+      <h2></h2>
+
+      <a href="index.html#inicio">Volver al inicio</a>
+    </article>
+    <hr />
+  </body>
+</html>

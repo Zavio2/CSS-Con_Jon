@@ -1,0 +1,26 @@
+htmlreference.io
+
+developer.mozilla.org
+
+web.dev
+
+cssreference.io
+
+CSS Icons
+
+SVG repo
+
+CanIuse.com (para saber que elementos aun se usan, cuales estan caducos y cuales en prueba)
+
+Code Guide, buenas pr�cticas para escribir c�digo (codeguide.com)
+
+
+frameworks:
+
+-Tailwindcss
+
+
+
+
+
+

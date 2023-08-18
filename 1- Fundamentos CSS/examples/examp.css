@@ -1,0 +1,33 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+.cabecera-sticky {
+  text-align: center;
+  position: sticky;
+  background-color: aqua;
+  height: 60px;
+  top: -35px;
+  padding-top: 35px;
+}
+
+.article-random {
+  background-color: turquoise;
+  height: 100vh;
+  width: 100%;
+}
+
+.article-random:nth-child(odd) {
+  background-color: rgb(137, 189, 78);
+}
+
+.article-title {
+  text-align: center;
+  background-color: blue;
+  position: sticky;
+  top: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
+}

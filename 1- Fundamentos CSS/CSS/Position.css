@@ -1,0 +1,88 @@
+/* static es el valor position por defecto */
+
+.static {
+  background-color: yellow;
+}
+
+/* relative: el elemento conserva sus dimensiones y posicion original en el flujo
+  del documento. Si se mueve toma como referencia su posicion original
+  El documento html respeta su espacio 
+  */
+
+.relative {
+  position: relative;
+  background-color: blueviolet;
+  height: 100px;
+  width: 300px;
+  top: 50px;
+  left: 50px;
+}
+
+/* Absolute: el documento pierde sus dimesiones y posición original
+en el flujo del documento.
+
+Si se mueve puede tomar tomar como referencia
+2 elementos:
+1- El primer ancestro o elemento padre con position relative
+2- Si no encuentra ningún ancestro/padre así, se guia por el documento html */
+
+.padre-relative {
+  position: relative;
+  border: solid black thin;
+  height: 300px;
+  width: 500px;
+  margin-top: 100px;
+}
+
+.absolute {
+  background-color: red;
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+}
+.absolute2 {
+  background-color: rgb(63, 18, 223);
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  bottom: 50px;
+  left: 50px;
+}
+
+.fixed {
+  background-color: lightsalmon;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+}
+
+/* Sticky: Solo funciona si su padre directo es es el body o si
+ su elemento contenedor tiene las medidas bien definidas */
+
+.sticky{
+    background-color: aquamarine;
+    position: sticky;
+    top: 150px;
+}
+
+/* z-index: controla la profundidad de los elementos, 
+a mayor valor, más al frente estará el elemento */
+
+.z-index-1{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(142, 194, 75);
+    z-index: 10;
+}
+
+.z-index-2{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(106, 70, 172);
+    position: relative;
+    bottom: 50px;
+    left: 80px;
+    z-index: -10;
+}

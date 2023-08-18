@@ -1,0 +1,239 @@
+/*
+ Regla css consta de 2 partes
+
+ 1- Selector: Elemento html (etiquetas, clases, ID...)
+ al que se le puede aplicar un bloque de declaración
+ de estilos
+
+ 2- Bloque de declaración de estilos { 
+    atributo: valor;
+    atributos-de-más-palabras: otro-valor;
+   }
+*/
+html {
+  background-color: rgb(228, 235, 235);
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: orangered;
+  background-color: black;
+}
+h2 {
+  color: rgb(25, 0, 255);
+}
+
+/* 
+Hay varias formas de definir estilos
+
+- Estilos en línea: usando "style" como atributo 
+de alguna etiqueta de html, directamente en el documento
+html
+
+-Internamente: abriendo etiquetas "style" en el
+documento html
+
+- Agregando un css externo: con la etiqueta
+<link rel="stylesheet" href="style que uses.css">
+ (este es el método más óptimo y es una buena práctica)
+*/
+
+/* 
+   Hay una forma de mandar a llamar a otra hoja de
+   de estilos dentro del mismo archivo css
+   mediante: @import url(archivo.css)
+
+   Pero son una mala práctica porque son un bloqueador a la hora de 
+   que el navegador lee esta instrucción (en pre proocesadores es diferente)
+*/
+
+/* 
+Selectores
+
+  
+        1- Todo: Con el selector universal *
+
+        2- Selector de etiquetas: Pones en el "selector" la etiqueta que quieras modificar
+        (ejemplo: h1, h2 , p..), pones la "propiedad" que quieres modificar y el 
+        valor.
+
+        3- Selector Clases: Es la forma más práctica e ideal de dar estilo. Se pone un punto y el nombre de la clase
+         (previamente atribuida a alguna etiqueta de html)
+       
+        4- Selector de ID: Se usa el # más el nombre del ID seleccionado
+        (los ID deben ser únicos, si se usan varios no pueden ser iguales)
+        ejemplo de ID. (Dar estilos con ID es un antipatrón y es preferible no
+        usarlo) */
+
+#parrafo-dos {
+  background-color: blueviolet;
+}
+
+/* 5- Selector de atributos: Se usa para seleccionar elementos que tengan
+        un atributo en específico
+
+        6- Selector por descendientes: Para seleccionar elementos que esten "adentro"
+        de otros
+
+          ejemplo:
+        div h2{
+        color: red;
+         }  */
+
+/* 
+      Dar estilos con clases te permite reutilizar el código
+      */
+
+/* Ordenar los estilos en orden alfabético puede ayudarte
+       a localizarlos más rápido  */
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+
+.bg-steelblue {
+  background-color: steelblue;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-white {
+  color: white;
+}
+
+/* Selectores avanzados */
+
+.hijos-directos > li {
+  background-color: rgb(231, 231, 17);
+}
+
+.hijos-descendientes b {
+  background-color: rgb(214, 214, 18);
+}
+
+/*los selectores hermnaos aplican a los elementos hermamos y que
+ esten por debajo del elemento de referencia */
+.hermanos-general ~ li {
+  background-color: brown;
+}
+
+/* Aplica solo al hermano que este debajo */
+.hermanos-adyacentes + li {
+  background-color: brown;
+}
+
+/* Selectores de atributos */
+
+.selectores-atributos a[href] {
+  color: orange;
+}
+
+.selectores-atributos a[target="_blank"] {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Con el asterisco haces referencia a un elemento que contenga
+una palabra en específico */
+
+.selectores-atributos a[href*="index"] {
+  font-size: 10px;
+  background-color: black;
+}
+/* hay otros comodines, buscar despues si los necesito */
+
+/* Selector universal */
+
+* {
+  font-family: sans-serif;
+}
+
+.selector-universal-especifico * {
+  background-color: rgb(216, 178, 10);
+}
+
+.form-pseudo *:valid{
+  border-color: rgb(55, 0, 255);
+}
+
+.form-pseudo *:invalid{
+  border-color: red;
+}
+
+.form-pseudo *:focus{
+  background-color: skyblue;
+}
+
+a:hover{
+  background-color: rgb(13, 45, 58);
+}
+
+.img-random:hover{
+  transform: scale(0.9);
+  border-radius: 100px;
+  transition: all 0.5s ease;
+ 
+} /* hay otras pseudoclases, buscar si necesito usarlas */
+
+
+/* Pseudoelementos */
+
+.after::after{
+  content: "✅";
+}
+
+.before::before{
+  content: "🖤";
+}
+
+
+.firstline::first-line{
+  font-size: 30px;
+  color: blue;
+}
+
+.pseudoelementos::first-letter{
+  font-size: 30px;
+  color: rgb(80, 136, 8);
+ 
+}
+
+.pseudoelementos::selection{
+  background-color: black;
+  color: red;
+}
+
+
+/* Agrupar selectores */
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+background-color: black;
+color: aquamarine;
+font-size: 20px;
+width: 300px;
+border-width: 2px;
+border-color: red;
+display: block;  /* pone elementos en linea como elementos en bloque */
+}
+
+
+/* Especificidad */
+
+#p{
+background-color: black;
+}
+
+.p{
+background-color: blue;           
+}
+
+p#p{
+   background-color: rgb(5, 255, 5);         /*se suma el valor de especificidad de ambos selectores */
+}

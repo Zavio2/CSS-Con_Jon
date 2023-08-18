@@ -1,0 +1,48 @@
+-Guiarme siempre por la documentación online para estudiar y aclarar dudas
+
+
+
+
+
+
+
+
+
+
+
+
+
+PASOS Y BUENAS PRÁCTICAS PARA TRABAJAR CON CSS:
+- Usar el normalize.css para normalizar los estilos y no lo de margin: 0 padding: 0
+
+- Para que se aplique el border-box a todo, poner al inicio de cada css:
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+o de una forma más simplificada:
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+
+Así se cuenta el tamaño completo de cada caja desde el borde
+ (incluyendo el ancho dedicho borde + el padding) y sea más sencillo
+trabajar con ellas
+
+
+
+
+
+- Trabajar con clases en vez de con el nombre de las etiquetas y que los nombres
+que se usen sean descriptivos.
