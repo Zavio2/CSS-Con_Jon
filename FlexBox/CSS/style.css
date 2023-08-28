@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 /***************** PROPIEDADES PARA LOS FLEX CONTAINER **********/
 
 /********* Flex-direction y Flex-wrap (su shorthand es flex-flow)*****/
@@ -68,7 +67,6 @@
   height: 20%;
 }
 
-
 /*******************************Justify-content************************************/
 
 .container6 {
@@ -119,11 +117,7 @@
   border: solid 1px;
 }
 
-
-
 /************** PROPIEDADES PARA LOS FLEX ITEMS ***************/
-
-
 
 /*****************flex-grow***************/
 .sect-flex-grow {
@@ -144,7 +138,6 @@
   flex-grow: 2;
 }
 
-
 /*************************flex-shrink*************************/
 .sect-flex-shrink {
   display: flex;
@@ -157,11 +150,31 @@
   background-color: rgb(166, 255, 0);
   border: solid 1px;
   width: 300px;
-  
-  
 }
 
 .sect-flex-shrink .item:nth-child(2) {
   flex-shrink: 2;
   background-color: rgba(0, 0, 0, 0.493);
+}
+
+/*************** order y align-self*****************/
+
+.sect-order-y-align-self {
+  display: flex;
+
+  height: 30vh;
+}
+
+.sect-order-y-align-self .item {
+  background-color: rgb(7, 49, 49);
+  border: solid 1px;
+
+  flex-basis: 20%;
+}
+
+.sect-order-y-align-self .item:nth-child(3) {
+  padding: 2rem;
+
+  order: -1;
+  align-self: self-end;
 }
